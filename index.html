@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather 1.0</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="City, State">
+                <button>
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <div class="main">
+            <section class="city">
+                <span class="name">Vienna</span>
+                <img src="https://flagsapi.com/AT/shiny/64.png" alt="flag">
+            </section>
+            <section class="weather">
+                <img src="https://openweathermap.org/img/wn/04d@2x.png " alt="weather icon">
+                <p class="description">Clouds</p>
+                <p class="temperature">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <span class="temperature" id="temperature">6,3</span>
+                    <span class="temperature">&#x2103;</span>
+                </p>
+                <p class="temperature feels">
+                    <span class="temperature" id="temperature">Feels 3,7</span>
+                    <span class="temperature">&#x2103;</span>
+                </p>
+                <p class="temperature-range">
+                    <span class="temperature min">
+                        <i class="fa-solid fa-temperature-low"></i>
+                        <span id="temperature">6</span>
+                    </span>
+                    <span class="temperature max">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <span id="temperature">7</span>
+                    </span>
+                </p>
+            </section>
+            <section class="sun">
+                <span class="rise">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <span id="sunrise">6:48</span>
+                </span>
+                <span class="set">
+                    <i class="fa-solid fa-arrow-trend-down"></i>
+                    <span id="sunset">18:26</span>
+                </span>
+            </section>
+            </div>
+        <div class="extra">
+            <ul>
+                <li>
+                    <span>clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span class="clouds" id="cloudiness">97</span>%
+
+                </li>
+                <li>
+                    <span>humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span class="humidity" id="humidity">70</span>%
+                </li>
+                <li>
+                    <span>pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span class="pressure" id="pressure">1026</span>&#x3371;
+                </li>
+                <li>
+                    <span>wind</span>
+                    <i class="fa-solid fa-wind"></i>
+                    <span class="wind" id="speed">3,5</span>&#x33a7;
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
