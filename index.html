@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <div class="app">
         <div class="search">
             <form action="">
-                <input type="text" placeholder="City, State">
+                <input type="text" placeholder="City, State" id="searchCity">
                 <button>
                     <i class="fa-solid fa-search"></i>
                 </button>
@@ -23,29 +23,29 @@
         </div>
         <div class="main">
             <section class="city">
-                <span class="name">Vienna</span>
-                <img src="https://flagsapi.com/AT/shiny/64.png" alt="flag">
+                <span class="name">~Vienna</span>
+                <img src="https://flagsapi.com/GL/shiny/64.png" alt="flag">
             </section>
             <section class="weather">
-                <img src="https://openweathermap.org/img/wn/04d@2x.png " alt="weather icon">
+                <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="weather icon">
                 <p class="description">Clouds</p>
                 <p class="temperature">
                     <i class="fa-solid fa-temperature-half"></i>
                     <span class="temperature" id="temperature">6,3</span>
                     <span class="temperature">&#x2103;</span>
                 </p>
-                <p class="temperature feels">
-                    <span class="temperature" id="temperature">Feels 3,7</span>
+                <p class="temperature-feels">
+                    <span class="temperature" id="temperature-feels">Feels 3,7</span>
                     <span class="temperature">&#x2103;</span>
                 </p>
                 <p class="temperature-range">
-                    <span class="temperature min">
+                    <span class="temperature-min">
                         <i class="fa-solid fa-temperature-low"></i>
-                        <span id="temperature">6</span>
+                        <span id="temperature-min">6</span>
                     </span>
-                    <span class="temperature max">
+                    <span class="temperature-max">
                         <i class="fa-solid fa-temperature-high"></i>
-                        <span id="temperature">7</span>
+                        <span id="temperature-max">7</span>
                     </span>
                 </p>
             </section>
@@ -87,5 +87,7 @@
         </div>
     </div>
 </body>
+
+<script src="app.js"></script>
 
 </html>
