@@ -3,6 +3,8 @@ let app = document.querySelector(".app");
 let form = document.querySelector("form");
 let sun = document.querySelector(".sun");
 let city = document.querySelector(".city");
+let latitude = document.getElementById("latitude");
+let longitude = document.getElementById("longitude");
 let weather = document.querySelector(".weather");
 let temperature = document.getElementById("temperature");
 let temperatureFeels = document.getElementById("temperature-feels");
@@ -24,7 +26,9 @@ form.addEventListener("submit", (e) => {
 const req = new Request("zilina.json");
 
 const searchCityWeather = (cityName) => {
-    fetch(req)
+    fetch(
+        req
+    )
         .then((response) => {
             if (!response.ok) {
                 throw new Error("Network response was not ok");
@@ -50,6 +54,8 @@ const searchCityWeather = (cityName) => {
 
 function fillOutputData(data) {
     city.querySelector(".name").innerHTML = data.name;
+    latitude.innerHTML = data.coord.lat.toFixed(3) + "&deg;";
+    longitude.innerHTML = data.coord.lon.toFixed(3) + "&deg;";
     sun.querySelector("img").src =
         "https://flagsapi.com/" + data.sys.country + "/shiny/64.png";
     weather.querySelector("img").src =
