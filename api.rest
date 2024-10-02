@@ -1,5 +1,5 @@
 @id={{$dotenv APPID}}
-@city=Zilina
+@city=Žilina
 @lat=49.2235
 @lon=18.7393
 
