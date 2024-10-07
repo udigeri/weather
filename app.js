@@ -27,8 +27,6 @@ const req = new Request("zilina.json");
 
 const searchCityWeather = (cityName) => {
     fetch(
-        // "https://api.openweathermap.org/data/2.5/weather?&units=metric&mode=json&appid=9505fd1df737e20152fbd78cdb289b6a&q=" +
-        //     cityName
         req
     )
         .then((response) => {
