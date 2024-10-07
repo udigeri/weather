@@ -54,8 +54,8 @@ const searchCityWeather = (cityName) => {
 
 function fillOutputData(data) {
     city.querySelector(".name").innerHTML = data.name;
-    latitude.innerHTML = data.coord.lat.toFixed(3) + "&deg;";
-    longitude.innerHTML = data.coord.lon.toFixed(3) + "&deg;";
+    latitude.innerHTML = data.coord.lat.toFixed(3) + "&deg;N";
+    longitude.innerHTML = data.coord.lon.toFixed(3) + "&deg;E";
     sun.querySelector("img").src =
         "https://flagsapi.com/" + data.sys.country + "/shiny/64.png";
     weather.querySelector("img").src =
