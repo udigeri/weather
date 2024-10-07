@@ -1,69 +1,131 @@
-:root {
-    --color-bg: 78, 78, 48;
-}
-
-html {
-    font-size: 100%;
-}
-
 body {
-    color: --color-bg;
-    font-size: 18px;
-    font-family: -apple-system, -system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background-image: linear-gradient(rgba(29, 131, 255, 0.9), transparent);
+  font-size: 100%;
+  font-family: -apple-system, -system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-repeat: no-repeat;
+  color: #1f1f1f;
 }
 
-@keyframes cloud_moving {
-    0% {
-        background-position: 0 0;
-    }
-    20% {
-        background-position: -4vw -3vw;
-    }
-    40% {
-        background-position: 6vw -7vw;
-    }
-    60% {
-        background-position: -2vw 4vw;
-    }
-    80% {
-        background-position: 8vw 2vw;
-    }
-    100% {
-        background-position: 0 0;
-    }
+@keyframes cloud-moving {
+  0% {
+    background-position: 0 0;
+  }
+  20% {
+    background-position: -4vw -3vw;
+  }
+  40% {
+    background-position: 6vw -7vw;
+  }
+  60% {
+    background-position: -2vw 4vw;
+  }
+  80% {
+    background-position: 8vw 2vw;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
-
 .app {
-    background-image: url("cloud.png");
-    background-repeat: no-repeat;
-    background-size: 15vw 20vw;
-
-    background-position: 0px 0px;
-    animation: cloud_moving 50s linear infinite;
+  border: 1px dotted seagreen;
+  background-image: url("cloud.png");
+  background-repeat: no-repeat;
+  background-size: 15vw 20vw;
+  background-position: 0px 0px;
+  animation: cloud-moving 50s linear infinite;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 .error {
-    background-image: url("lightning.png");
+  background-image: url("lightning.png");
 }
 
+.search {
+  border: 1px dotted salmon;
+  display: block;
+  text-align: center;
+}
+
+.main {
+  border: 1px dotted red;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main img {
+  width: 64px;
+}
+
+.sun {
+  border: 1px dotted pink;
+  font-size: 1.2rem;
+  color: rgb(154, 154, 154);
+  margin-top: -32px;
+  display: flex;
+}
+.sun .rise {
+  padding-right: 34px;
+  border: 1px dotted pink;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sun .set {
+  padding-left: 34px;
+  border: 1px dotted pink;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.city .name {
+  font-size: 1.75rem;
+}
+.city svg {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  fill: currentColor;
+  overflow: hidden;
+}
+.city p {
+  margin-top: -0.3rem;
+}
+
+.extra {
+  border: 1px dotted darkblue;
+}
 .extra ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
 }
 
-.extra li {
-    margin: 30px;
-    width: 210px;
-    height: 254px;
-    border-radius: 20px;
-    border-radius: 50px;
-    background: #eaeaea;
-    box-shadow: 13px 13px 26px #c4c4c4, -13px -13px 26px #d1e0f9;
+li {
+  margin: 30px;
+  width: 210px;
+  height: 254px;
+  border-radius: 20px;
+  border-radius: 50px;
+  background: #eaeaea;
+  box-shadow: 13px 13px 26px #c4c4c4, -13px -13px 26px #d1e0f9;
 }
+
+footer {
+  border: 1px dotted lightgreen;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
