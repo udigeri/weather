@@ -1,0 +1,140 @@
+$contour: 1px;
+$base-color: #1f1f1f;
+
+body {
+    font-size: 100%;
+    font-family: -apple-system, -system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    // background-image: linear-gradient(rgba(15, 123, 255, 0.9), transparent);
+    background-repeat: no-repeat;
+    color: $base-color;
+}
+
+@keyframes cloud-moving {
+    0% {
+        background-position: 0 0;
+    }
+    20% {
+        background-position: -4vw -3vw;
+    }
+    40% {
+        background-position: 6vw -7vw;
+    }
+    60% {
+        background-position: -2vw 4vw;
+    }
+    80% {
+        background-position: 8vw 2vw;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.app {
+    border: $contour dotted seagreen;
+    background-image: url("cloud.png");
+    background-repeat: no-repeat;
+    background-size: 15vw 20vw;
+
+    background-position: 0px 0px;
+    animation: cloud-moving 50s linear infinite;
+
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.error {
+    background-image: url("lightning.png");
+}
+
+.search {
+    border: $contour dotted salmon;
+    display: block;
+    text-align: center;
+}
+
+.main {
+    border: $contour dotted red;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        width: 64px;
+    }
+}
+
+.sun {
+    border: $contour dotted pink;
+    font-size: 1.2rem;
+    color: rgb(154, 154, 154);
+    margin-top: -32px;
+    display: flex;
+    .rise {
+        padding-right: 34px;
+        border: $contour dotted pink;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .set {
+        padding-left: 34px;
+        border: $contour dotted pink;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .name {
+        font-size: 1.75rem;
+    }
+
+    svg {
+        width: 2.0em;
+        height: 2.0em;
+        vertical-align: middle;
+        fill: currentColor;
+        overflow: hidden;
+    }
+    
+    p{
+        margin-top: -0.3rem;
+    }
+}
+
+
+.extra {
+    border: $contour dotted darkblue;
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        overflow: hidden;
+    }
+}
+
+li {
+    margin: 30px;
+    width: 210px;
+    height: 254px;
+    border-radius: 20px;
+    border-radius: 50px;
+    background: #eaeaea;
+    box-shadow: 13px 13px 26px #c4c4c4, -13px -13px 26px #d1e0f9;
+}
+
+footer {
+    border: $contour dotted lightgreen;
+    text-align: center;
+}
