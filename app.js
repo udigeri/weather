@@ -1,6 +1,7 @@
 let searchCity = document.getElementById("searchCity");
 let app = document.querySelector(".app");
 let form = document.querySelector("form");
+let main = document.querySelector(".main");
 let sun = document.querySelector(".sun");
 let city = document.querySelector(".city");
 let latitude = document.getElementById("latitude");
@@ -23,11 +24,13 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-const req = new Request("zilina.json");
+//const req = new Request("vienna.json");
 
 const searchCityWeather = (cityName) => {
     fetch(
-        req
+        "https://api.openweathermap.org/data/2.5/weather?&units=metric&mode=json&appid=&q=" +
+            cityName
+        // req
     )
         .then((response) => {
             if (!response.ok) {
@@ -37,7 +40,7 @@ const searchCityWeather = (cityName) => {
         })
         .then((data) => {
             console.log(data);
-            if (data.cod == 201) {
+            if (data.cod == 200) {
                 fillOutputData(data);
             } else {
                 searchCity.value = "";
@@ -56,7 +59,7 @@ function fillOutputData(data) {
     city.querySelector(".name").innerHTML = data.name;
     latitude.innerHTML = data.coord.lat.toFixed(3) + "&deg;N";
     longitude.innerHTML = data.coord.lon.toFixed(3) + "&deg;E";
-    sun.querySelector("img").src =
+    main.querySelector("img").src =
         "https://flagsapi.com/" + data.sys.country + "/shiny/64.png";
     weather.querySelector("img").src =
         "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";

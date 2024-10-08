@@ -1,32 +1,34 @@
+@charset "UTF-8";
 body {
   font-size: 100%;
   font-family: -apple-system, -system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-image: linear-gradient(rgba(15, 123, 255, 0.9), transparent);
   background-repeat: no-repeat;
   color: #1f1f1f;
 }
 
 @keyframes cloud-moving {
   0% {
-    background-position: 0 0;
+    background-position: 50% 15%;
   }
   20% {
-    background-position: -4vw -3vw;
+    background-position: 30% 5%;
   }
   40% {
-    background-position: 6vw -7vw;
+    background-position: 80% 20%;
   }
   60% {
-    background-position: -2vw 4vw;
+    background-position: 40% 25%;
   }
   80% {
-    background-position: 8vw 2vw;
+    background-position: 20% 10%;
   }
   100% {
-    background-position: 0 0;
+    background-position: 50% 15%;
   }
 }
 .app {
-  border: 1px dotted seagreen;
+  border: 0px dotted seagreen;
   background-image: url("cloud.png");
   background-repeat: no-repeat;
   background-size: 15vw 20vw;
@@ -41,40 +43,40 @@ body {
 }
 
 .search {
-  border: 1px dotted salmon;
+  border: 0px dotted salmon;
   display: block;
   text-align: center;
 }
 
 .main {
-  border: 1px dotted red;
+  border: 0px dotted red;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main img {
+.mainimg {
   width: 64px;
 }
 
 .sun {
-  border: 1px dotted pink;
+  border: 0px dotted pink;
   font-size: 1.2rem;
-  color: rgb(154, 154, 154);
+  color: rgb(63, 63, 63);
   margin-top: -32px;
   display: flex;
 }
 .sun .rise {
   padding-right: 34px;
-  border: 1px dotted pink;
+  border: 0px dotted pink;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .sun .set {
   padding-left: 34px;
-  border: 1px dotted pink;
+  border: 0px dotted pink;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -87,7 +89,7 @@ body {
   text-align: center;
 }
 .city .name {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 .city svg {
   width: 2em;
@@ -100,32 +102,94 @@ body {
   margin-top: -0.3rem;
 }
 
+.weather {
+  border: 0px dotted lightgreen;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weather img {
+  margin-top: -2rem;
+  width: 128px;
+}
+.weather .description {
+  margin-top: -2rem;
+  font-size: 0.8rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: -0.75rem;
+}
+
+.temperature-feels {
+  font-size: 1rem;
+  margin-top: -3.25rem;
+}
+
+.temperature-range {
+  font-size: 1.75rem;
+  margin-top: -0.05rem;
+}
+
 .extra {
-  border: 1px dotted darkblue;
+  border: 0px dotted darkblue;
 }
 .extra ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: -2rem 0rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
+.extra li {
+  margin: 1.7rem 0.5rem 3rem 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
 
 li {
-  margin: 30px;
-  width: 210px;
-  height: 254px;
+  width: 8rem;
+  height: 12rem;
   border-radius: 20px;
-  border-radius: 50px;
   background: #eaeaea;
+  background: linear-gradient(to bottom right, rgb(136, 203, 225), pink);
   box-shadow: 13px 13px 26px #c4c4c4, -13px -13px 26px #d1e0f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+li span {
+  font-size: 1.25rem;
+}
+li i {
+  font-size: 2rem;
+}
+
+.wind::after {
+  content: " ㎧";
+}
+
+.relative::after {
+  content: " %";
+}
+
+.atmospheric::after {
+  content: " ㍱";
 }
 
 footer {
-  border: 1px dotted lightgreen;
+  border: 0px dotted lightgreen;
   text-align: center;
+  margin-top: -0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
