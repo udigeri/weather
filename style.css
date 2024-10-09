@@ -31,7 +31,7 @@ body {
   border: 0px dotted seagreen;
   background-image: url("cloud.png");
   background-repeat: no-repeat;
-  background-size: 15vw 20vw;
+  background-size: 45% 40%;
   background-position: 0px 0px;
   animation: cloud-moving 50s linear infinite;
   margin: 0 auto;
@@ -55,9 +55,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.mainimg {
-  width: 64px;
 }
 
 .sun {
@@ -90,6 +87,7 @@ body {
 }
 .city .name {
   font-size: 2rem;
+  font-weight: 700;
 }
 .city svg {
   width: 2em;

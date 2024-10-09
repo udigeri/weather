@@ -35,7 +35,7 @@ body {
     border: $contour dotted seagreen;
     background-image: url("cloud.png");
     background-repeat: no-repeat;
-    background-size: 15vw 20vw;
+    background-size: 45% 40%;
 
     background-position: 0px 0px;
     animation: cloud-moving 50s linear infinite;
@@ -61,9 +61,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    &img {
-        width: 64px;
-    }
 }
 
 .sun {
@@ -95,6 +92,7 @@ body {
     text-align: center;
     .name {
         font-size: 2.0rem;
+        font-weight: 700;
     }
 
     svg {

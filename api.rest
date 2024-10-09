@@ -20,7 +20,7 @@ GET https://flagsapi.com/DE/flat/64.png HTTP/1.1
 GET https://flagsapi.com/SK/shiny/64.png HTTP/1.1
 
 ### Geocoding location
-GET http://api.openweathermap.org/geo/1.0/direct?q={{city}}&limit=5&appid={{id}}
+GET http://api.openweathermap.org/geo/1.0/direct?q={{city}}&limit=1&appid={{id}}
 
 ### Forecast Data
 GET https://api.openweathermap.org/data/2.5/forecast?q={{city}}&appid={{id}}&units=metric&mode=json HTTP/1.1

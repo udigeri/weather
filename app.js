@@ -1,3 +1,4 @@
+let appid = "";
 let searchCity = document.getElementById("searchCity");
 let app = document.querySelector(".app");
 let form = document.querySelector("form");
@@ -24,13 +25,34 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-//const req = new Request("vienna.json");
 
 const searchCityWeather = (cityName) => {
     fetch(
-        "https://api.openweathermap.org/data/2.5/weather?&units=metric&mode=json&appid=&q=" +
+        "https://api.openweathermap.org/geo/1.0/direct?&limit=1&appid=" +
+            appid +
+            "&q=" +
             cityName
-        // req
+    )
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((location) => {
+            console.log(location);
+            searchLocationWeather(location);
+        });
+};
+
+function searchLocationWeather(location) {
+    fetch(
+        "https://api.openweathermap.org/data/2.5/weather?&units=metric&mode=json&appid=" +
+            appid +
+            "&lat=" +
+            location[0].lat +
+            "&lon=" +
+            location[0].lon
     )
         .then((response) => {
             if (!response.ok) {
@@ -53,7 +75,7 @@ const searchCityWeather = (cityName) => {
         .catch((error) => {
             console.error("Fetch error:", error);
         });
-};
+}
 
 function fillOutputData(data) {
     city.querySelector(".name").innerHTML = data.name;
@@ -94,4 +116,4 @@ const initApp = (city) => {
     searchCityWeather(city);
 };
 
-initApp("wroclaw");
+initApp("Žilina");
