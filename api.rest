@@ -27,3 +27,7 @@ GET https://api.openweathermap.org/data/2.5/forecast?q={{city}}&appid={{id}}&uni
 
 ### Forecast Data by location
 GET https://api.openweathermap.org/data/2.5/forecast?lat={{lat}}&lon={{lon}}&appid={{id}}&units=metric&mode=json HTTP/1.1
+
+### get actual Date Time according coordinates
+
+GET https://timeapi.io/api/time/current/coordinate?latitude=19.59&longitude=-155.420 HTTP/1.1

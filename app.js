@@ -41,6 +41,7 @@ const searchCityWeather = (cityName) => {
         })
         .then((location) => {
             console.log(location);
+            searchLocationTime(location);
             searchLocationWeather(location);
         });
 };
@@ -75,6 +76,33 @@ function searchLocationWeather(location) {
         .catch((error) => {
             console.error("Fetch error:", error);
         });
+}
+
+function searchLocationTime(location) {
+    fetch(
+        "https://timeapi.io/api/time/current/coordinate" +
+            "?latitude=" +
+            location[0].lat +
+            "&longitude=" +
+            location[0].lon
+    )
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            fillOutputTime(data);
+        })
+        .catch((error) => {
+            console.error("Fetch error:", error);
+        });
+}
+
+function fillOutputTime(data) {
+    city.querySelector(".time").innerHTML = data.time;
 }
 
 function fillOutputData(data) {

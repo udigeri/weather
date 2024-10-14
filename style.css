@@ -89,6 +89,10 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
+.city .time {
+  font-size: 1.0rem;
+  font-weight: 600;
+}
 .city svg {
   width: 2em;
   height: 2em;
